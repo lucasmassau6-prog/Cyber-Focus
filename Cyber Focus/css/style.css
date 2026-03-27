@@ -1,0 +1,107 @@
+/*variáveis*/
+:root {
+    --backgroundColor: #12131a;
+    --cardColor: #12131a;
+    --fontColor: #0ff;
+    --shadowColor: #00000029;
+}
+/*fontes*/
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size:x-large;
+  letter-spacing: 1px;;
+}
+/*reset*/
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*estilos básicos*/
+*{
+    font-family: 'Orbitron', sans-serif;
+    color: var(--fontColor);
+}
+body {
+    background-color: var(--backgroundColor);
+}
+.app {
+    background-color: var(--cardColor);
+    box-shadow: 0 0 10px var(--shadowColor);
+    border-radius: 0;
+    margin: 0;
+    padding: 20px;
+
+    
+}
+/* mobile */
+*{
+    font-size: 16px;
+
+}
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.controls {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.timer{
+    font-size: 8rem;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #0ff;
+
+}
+
+/*botões*/
+button{
+    padding: 18px;
+    border: none;
+    background-color: #1e293b;
+    color: var(--fontColor);
+    text-shadow: 0 0 8px var(--fontColor);
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: #334155;
+}
+#pause {
+    color: #ff003c;
+    text-shadow: 0 0 8px #ff003c;
+}
+#reset {
+    color: #ffd60a;
+    text-shadow: 0 0 8px #ffd60a;
+}
+
+/* outros tamanhos */
+@media only screen and (min-width: 768px) {
+   
+    body {
+        background: linear-gradient(135deg, #12131a, #1e293b);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .app{
+    height: auto;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadowColor);
+    }
+    .controls {
+        position: static;
+        margin-top: 20px;
+    }
+}
